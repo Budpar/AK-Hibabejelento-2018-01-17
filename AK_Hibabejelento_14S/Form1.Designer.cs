@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.butOK = new System.Windows.Forms.Button();
             this.hibabejelento_nevLB = new System.Windows.Forms.Label();
             this.hibabejelento_datumLB = new System.Windows.Forms.Label();
             this.hibabejelento_leirasLB = new System.Windows.Forms.Label();
@@ -37,14 +37,15 @@
             this.hibabejelento_datumTB = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // button1
+            // butOK
             // 
-            this.button1.Location = new System.Drawing.Point(101, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.butOK.Location = new System.Drawing.Point(101, 226);
+            this.butOK.Name = "butOK";
+            this.butOK.Size = new System.Drawing.Size(75, 23);
+            this.butOK.TabIndex = 0;
+            this.butOK.Text = "OK";
+            this.butOK.UseVisualStyleBackColor = true;
+            this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
             // hibabejelento_nevLB
             // 
@@ -79,6 +80,7 @@
             this.hibabejelento_nevTB.Name = "hibabejelento_nevTB";
             this.hibabejelento_nevTB.Size = new System.Drawing.Size(260, 20);
             this.hibabejelento_nevTB.TabIndex = 4;
+            this.hibabejelento_nevTB.TextChanged += new System.EventHandler(this.hibabejelento_nevTB_TextChanged);
             // 
             // hibabejelento_leirasTB
             // 
@@ -87,6 +89,7 @@
             this.hibabejelento_leirasTB.Name = "hibabejelento_leirasTB";
             this.hibabejelento_leirasTB.Size = new System.Drawing.Size(260, 112);
             this.hibabejelento_leirasTB.TabIndex = 5;
+            this.hibabejelento_leirasTB.TextChanged += new System.EventHandler(this.hibabejelento_leirasTB_TextChanged);
             // 
             // hibabejelento_datumTB
             // 
@@ -94,6 +97,7 @@
             this.hibabejelento_datumTB.Name = "hibabejelento_datumTB";
             this.hibabejelento_datumTB.Size = new System.Drawing.Size(260, 20);
             this.hibabejelento_datumTB.TabIndex = 6;
+            this.hibabejelento_datumTB.ValueChanged += new System.EventHandler(this.hibabejelento_datumTB_ValueChanged);
             // 
             // Form1
             // 
@@ -106,7 +110,7 @@
             this.Controls.Add(this.hibabejelento_leirasLB);
             this.Controls.Add(this.hibabejelento_datumLB);
             this.Controls.Add(this.hibabejelento_nevLB);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.butOK);
             this.Name = "Form1";
             this.Text = "AK Hibabejelentő Program";
             this.ResumeLayout(false);
@@ -116,7 +120,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button butOK;
         private System.Windows.Forms.Label hibabejelento_nevLB;
         private System.Windows.Forms.Label hibabejelento_datumLB;
         private System.Windows.Forms.Label hibabejelento_leirasLB;

@@ -53,8 +53,18 @@ namespace AK_Hibabejelento_14S
 
         private void butOK_Click(object sender, EventArgs e)
         {
-            Hiba hibajelentes = new Hiba(nev, datum, leiras);
-            Hibak.Add(hibajelentes);
+            
+            if (hibabejelento_nevTB.Text == String.Empty && hibabejelento_datumTB.Text == String.Empty && hibabejelento_leirasTB.Text == String.Empty) {
+                MessageBox.Show("Nem töltött ki minden adatot!", "Hiba!");
+            }
+            else {
+                Hiba hibajelentes = new Hiba(nev, datum, leiras);
+                Hibak.Add(hibajelentes);
+
+                hibabejelento_nevTB.Text = String.Empty;
+                hibabejelento_datumTB.Text = String.Empty;
+                hibabejelento_leirasTB.Text = String.Empty;
+            }
         }
     }
 }
